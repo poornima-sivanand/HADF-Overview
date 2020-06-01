@@ -1,18 +1,10 @@
-FROM ubuntu:latest
+FROM jekyll/jekyll:3.8
 
-USER 0
+COPY ./docs /srv/jekyll/
 
-RUN apt -y update && \
-    apt -y install ruby-full build-essential zlib1g-dev git-core && \
-    git clone https://github.com/poornima-sivanand/HADF-Overview.git && \
-    cd HADF-Overview && \
-    git checkout add-web-application-playbook && \
-    gem install bundler jekyll && \
-    bundle install
-    
+RUN gem install just-the-docs
+
 EXPOSE 4000
 
-WORKDIR HADF-Overview
-
-CMD ["bundle","exec","jekyll", "serve", "--config", "docs/_config.yml"]
+CMD ["jekyll", "serve"]
 
