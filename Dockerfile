@@ -12,5 +12,5 @@ RUN apt -y update && \
     
 EXPOSE 4000
 
-CMD ["bundle","exec","jekyll", "serve", "--config", "docs/_config.yml"]
+CMD ["cd", "HADF-overview", "&&", "bundle","exec","jekyll", "serve", "--config", "docs/_config.yml"]
 
