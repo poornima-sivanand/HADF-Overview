@@ -1,6 +1,6 @@
 FROM jekyll/jekyll:3.8
 
-COPY ./docs /srv/jekyll/
+COPY ./ /srv/jekyll/
 
 RUN gem install just-the-docs
 
