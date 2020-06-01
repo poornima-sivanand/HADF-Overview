@@ -9,8 +9,8 @@
         "logDriver": "awslogs",
         "secretOptions": null,
         "options": {
-          "awslogs-group": "/ecs/gh-task-definition",
-          "awslogs-region": "us-east-2",
+          "awslogs-group": "/ecs/task-definition",
+          "awslogs-region": "ca-central-1",
           "awslogs-stream-prefix": "ecs"
         }
       },
@@ -54,7 +54,7 @@
       "dockerLabels": null,
       "systemControls": null,
       "privileged": null,
-      "name": "gh-pages"
+      "name": "gh-pages-deploy"
     }
   ],
   "placementConstraints": [],
@@ -64,8 +64,8 @@
     "EC2",
     "FARGATE"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:us-east-2:231732602451:task-definition/gh-task-definition:1",
-  "family": "gh-task-definition",
+  "taskDefinitionArn": "arn:aws:ecs:ca-central-1:231732602451:task-definition/task-definition:1",
+  "family": "task-definition",
   "requiresAttributes": [
     {
       "targetId": null,
