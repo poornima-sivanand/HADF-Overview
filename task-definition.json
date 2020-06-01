@@ -23,6 +23,7 @@
       }
     ],
     "memory": "512",
+    "family": "gh-task-definition",
     "compatibilities": [
       "EC2",
       "FARGATE"
