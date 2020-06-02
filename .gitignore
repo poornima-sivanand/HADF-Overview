@@ -1,5 +1,3 @@
-_site/**
-_site/
 .bundle/config
 .bundle/
 .jekyll-cache/Jekyll

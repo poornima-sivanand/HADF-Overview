@@ -1,0 +1,36 @@
+{
+    "ipcMode": null,
+    "executionRoleArn": "arn:aws:iam::231732602451:role/ecsTaskExecutionRole",
+    "containerDefinitions": [
+      {
+        "logConfiguration": { 
+            "logDriver": "awslogs",
+            "options": { 
+               "awslogs-group" : "/ecs/fargate-task-definition",
+               "awslogs-region": "ca-central-1",
+               "awslogs-stream-prefix": "ecs"
+            }
+         },
+        "entryPoint": [],
+        "portMappings": [
+          {
+            "hostPort": 4000,
+            "protocol": "tcp",
+            "containerPort": 4000
+          }
+        ],
+        "name": "gh-pages-deploy"
+      }
+    ],
+    "memory": "512",
+    "compatibilities": [
+      "EC2",
+      "FARGATE"
+    ],
+    "requiresCompatibilities": [
+      "FARGATE"
+    ],
+    "networkMode": "awsvpc",
+    "cpu": "256",
+    "status": "ACTIVE"
+  }
