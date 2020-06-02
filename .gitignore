@@ -5,3 +5,5 @@
 .DS_store
 .Gemfile.lock
 *.lock
+_site
+_site/**
